@@ -3,7 +3,7 @@
 
          * Функционал кнопки sign up
          */
-        document.getElementById('register').addEventListener('click', handleSignUp, false);
+   document.getElementById('register').addEventListener('click', handleSignUp, false);
 
         function handleSignUp() {
             
