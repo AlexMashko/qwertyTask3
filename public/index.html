@@ -1,0 +1,244 @@
+<html lang="en" width="100" height="100%">
+<head>
+	<meta charset="utf-8">
+ 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Mashko Alex task 3</title>
+	
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">	
+<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" ><!-- for bootstrap -->
+<link rel="stylesheet" href="bootstrap/css/bootstrap-theme.min.css"><!-- for bootstrap -->
+<link rel="stylesheet" href="styles/style.css" >
+
+	<script type="text/javascript" src="js/colorpicker.min.js"></script>
+</head>
+<body>
+
+<div class="wrapper">
+    <header class="header clearfix">
+        <div class="header-logo">
+			<img src="images/logo.png" class=" header-logo-img" >
+		</div>
+		<div class="main-menu">
+			<ul>
+				<li><a href="#link1">link1</a></li>
+				<li><a href="#link2">link2</a></li>
+				<li><a href="#link3">link3</a></li>
+				<li><a href="#link4">link4</a></li>
+				<li><a href="#link5">link5</a></li>
+			</ul>
+		</div>
+	</header>
+	<div class="subheader">
+		<div class="panel-group">
+		  <div class="panel panel-default">
+		    <div class="panel-heading ">
+		      <div class="panel-title ">
+		        <a data-toggle="collapse" href="#collapse1">Регистрация | Авторизация</a>
+		      </div>
+		    </div>
+		    <div id="collapse1" class="panel-collapse collapse">
+		      <div class="panel-body">
+		      	<ul class="nav nav-tabs">
+				  <li class="active"><a data-toggle="tab" href="#loginDiv">Войти</a></li>
+				  <li><a data-toggle="tab" href="#registrationDiv">Регистрация</a></li>
+				</ul>
+
+				<div class="tab-content">
+				  <div id="loginDiv" class="tab-pane fade in active">
+				    <h3>Вход</h3>
+				    <div class="" id="auth_form_message"></div>
+				    <div class="form-container">
+				    	<form class="form-horizontal" action="" id="auth_form" onsubmit="return false;">
+				    		<div class="hidden-elems">
+						  <div class="form-group hidden-elem">
+						    <label class="control-label col-sm-2" for="auth_login" >Email:</label>
+						    <div class="col-sm-10">
+						      <input type="email" class="form-control" id="auth_login" placeholder="Введите email" autocomplete="on">
+						    </div>
+						  </div>
+						  <div class="form-group hidden-elem">
+						    <label class="control-label col-sm-2" for="auth_password">Пароль:</label>
+						    <div class="col-sm-10"> 
+						      <input type="password" class="form-control" id="auth_password" placeholder="Введите пароль">
+						    </div>
+						  </div>
+						  <div class="form-group hidden-elem"> 
+						    <div class="col-sm-offset-2 col-sm-10">
+						      <div class="checkbox">
+						        <label><input type="checkbox">Запомнить меня</label>
+						      </div>
+						    </div>
+						  </div>
+						  </div>
+						  <div class="form-group"> 
+						    <div class="col-sm-offset-2 col-sm-10">
+						      <button id="auth" type="submit" class="btn btn-default">Войти</button>
+						    </div>
+						  </div>
+						</form>
+				    </div>
+				  </div>
+				  <div id="registrationDiv" class="tab-pane fade">
+				    <h3>Создать Аккаунт</h3>
+				    <div class="" id="register_form_message"></div>
+				    <div class="form-container">
+				    	<form class="form-horizontal" action="" id="register_form" onsubmit="return false;">
+<!-- -->				    <div class="form-group">
+						    	<label class="control-label col-sm-2" for="register_name">Имя:</label>
+						    	<div class="col-sm-10">
+						      	  <input type="text" class="form-control" id="register_name" placeholder="Введите Ваше Имя">
+						    	</div> 
+						  	</div>
+						  <div class="form-group">
+						    <label class="control-label col-sm-2" for="register_login">Email:</label>
+						    <div class="col-sm-10">
+						      <input type="email" class="form-control" id="register_login" placeholder="Введите email">
+						    </div>
+						  </div>
+						  <div class="form-group">
+						    <label class="control-label col-sm-2" for="register_password">Пароль:</label>
+						    <div class="col-sm-10"> 
+						      <input type="password" class="form-control" id="register_password" placeholder="Введите пароль">
+						    </div>
+						  </div>
+						  <div class="form-group">
+						    <label class="control-label col-sm-2" for="register_confirmation">Пароль:</label>
+						    <div class="col-sm-10"> 
+						      <input type="password" class="form-control" id="register_confirmation" placeholder="Подтвердите пароль">
+						    </div>
+						  </div>
+						  <div class="form-group"> 
+						    <div class="col-sm-offset-2 col-sm-10">
+						      <div class="checkbox">
+						        <label><input type="checkbox">Запомнить меня</label>
+						      </div>
+						    </div>
+						  </div>
+						  <div class="form-group"> 
+						    <div class="col-sm-offset-2 col-sm-10">
+						      <button type="submit" id="register" class="btn btn-default" >Создать</button>
+						    </div>
+						  </div>
+						</form>
+				    </div>
+				  </div>
+				</div>
+		  	  </div>
+		      <!-- <div class="panel-footer">Panel Footer</div> -->
+		    </div>
+		  </div>
+		</div>	
+	</div>
+        <div class="content-container ">
+            <div class="sidebar" id="sidebar" >
+
+            	<div class="sidebar-content" >
+            		
+            		<button class="w3-bar-item w3-button w3-medium w3-display-topright sidebar-close-button" id="sidebar-close-button"> &times; 
+	  				</button>
+	  				
+	                <h3> Sidebar</h3>
+					
+	               	<ul>
+						<li><a href="#link1">link1</a></li>
+						<li><a href="#link2">link2</a></li>
+						<li><a href="#link3">link3</a></li>
+					</ul>
+					<hr>
+					<div id="sidebar-addition-functions" class="form-group ">
+						<label for="fontSizeInput">Шрифт (8-24)px:</label><br>
+						<select name="fontFamilySelect" id="fontFamilySelect">
+							<option value="Times New Roman">Times New Roman</option>
+							<option value="Georgia">Georgia</option>
+							<option value="Verdana">Verdana</option>
+							<option value="Comic Sans MS">Comic Sans MS</option>
+							<option value="algerian">algerian</option>
+							<option value="fantasy">fantasy</option>
+							<option value="monospace">monospace</option>
+							<option value="TREBUCHET MS">TREBUCHET MS</option>
+						</select><br><br>
+						<input id="fontSizeInput" class="w3-input fontSizeInput" type="number" name="fontSizeInput" value="16"><input type="button" class="w3-medium w3-bar-itemw 3-input" id="fontSizeButton" value="Изменить" >
+						<hr>
+						<button id="buttonOpenColorPicker" class="buttonOpenColorPicker" >Цвета фона</button><br>
+						<label for="fontSizeInput">Удалить последний абзац</label><br>
+						<button class="buttonRemoveLastP" id="buttonRemoveLastP">Удалить</button>
+					</div>
+
+
+				</div>
+            </div>
+            <div class="content">
+				<button class="w3-button w3-teal w3-xlarge sidebar-open-button"  id="sidebar-open-button">☰</button>
+				<div id="picker-container" >
+					<div id="color-picker" class="cp-default">
+					    <div class="picker-wrapper">
+					    <div id="picker" class="picker"></div>
+					    <div id="picker-indicator" class="picker-indicator"></div>
+					</div>
+					<div class="pcr-wrapper">
+					    <div id="pcr" class="pcr"></div>
+					    <div id="pcr-indicator" class="pcr-indicator"></div>
+					 </div>
+					<ul id="color-values">
+					    <li><label>RGB:</label><span id="rgb"></span></li>
+					    <li><label>HSV:</label><span id="hsv"></span></li>
+					    <li><label>HEX:</label><span id="hex"></span></li>
+					    <li><div id="pcr_bg"></div></li>
+					</ul>
+					</div>
+					<span onclick="this.parentElement.style.display='none'"
+  					class="w3-button w3-display-topright">X</span>
+				</div>
+				<div>
+            	<h1> <center>Lorem ipsum dolor.</center></h1>
+           		
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut quae velit esse, dolore ipsum itaque porro quas voluptatibus placeat quisquam voluptate, tenetur, sint, rerum quidem illum soluta blanditiis vero fuga sequi perspiciatis cumque laboriosam. Dolor nesciunt natus modi nisi aliquid labore, voluptas quam reiciendis, odit distinctio officiis animi, libero nihil doloremque repellat corporis nulla quae! Accusamus corporis a repellendus ipsum libero soluta consequatur vel voluptas sequi. Consequuntur repudiandae nulla, sed iusto tempora provident. Sunt obcaecati iusto nobis tempora distinctio dolorum ratione facilis deleniti dicta aperiam impedit, ex, aliquam vel nisi minus repellendus dignissimos esse corporis veritatis ipsam amet dolores necessitatibus.</p>
+            	</div>
+                <div>
+                	<h3 id="link1"><center>Link1</center></a></h3>
+               		<img src="images/1.jpg" class="img-thumbnail" alt="">
+               		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, voluptatem?</p>
+               	</div>
+               	<div>
+                	<h3 id="link2"><center>Link2</center></a></h3>
+               		<img src="images/mountains.jpg" class="img-thumbnail" alt="">
+               		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, voluptatem?</p>
+               	</div>
+               	<div>
+                	<h3 id="link3"><center>Link3</center></a></h3>
+               		<img src="images/mountains2.jpg" class="img-thumbnail" alt="">
+               		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim molestias, totam tempore deleniti nesciunt dolores mollitia temporibus doloribus ut aliquam. Nihil inventore in iusto consequatur non sit, omnis obcaecati? Eaque voluptas quae earum consequuntur rem, dignissimos quo dolore nam laudantium, voluptatibus culpa assumenda fuga molestiae nisi modi, porro, reprehenderit quisquam alias eos. Dicta, et nihil aspernatur similique ipsam, nemo odio, perspiciatis est alias, ad voluptatem aliquam explicabo corporis rerum dolorem obcaecati doloremque deleniti sed ipsa officiis voluptates sequi laboriosam quam vel! Illo distinctio sit quasi, veritatis et ab, atque fuga, recusandae eius maxime fugiat molestias tempora quibusdam neque libero earum.</p>
+               	</div>
+            </div>
+        </div>
+
+    <div class="footer">
+    	<h2><center>FOOTER</center></h2>
+	</div>
+	<div id="upPointer" ><a href="#" title="Вернуться к началу" ><img  src="images/UpPointer.png" alt=""></a></div>
+ </div>
+<!--  start Initialize Firebase -->
+<script src="https://www.gstatic.com/firebasejs/4.10.0/firebase.js"></script>
+<script>
+  var config = {
+    apiKey: "AIzaSyDcVSWQ_f9zoq1kiivZeUjNKIjhHDhNB_U",
+    authDomain: "qwertytask2mashkoalex.firebaseapp.com",
+    databaseURL: "https://qwertytask2mashkoalex.firebaseio.com",
+    projectId: "qwertytask2mashkoalex",
+    storageBucket: "qwertytask2mashkoalex.appspot.com",
+    messagingSenderId: "1059824745631"
+  };
+  firebase.initializeApp(config);
+</script>
+<script src="firebaseauthscript.js" ></script>
+<!--  End Initialize Firebase -->
+<script type="text/javascript" >
+</script>
+	<script src="script.js" ></script>
+<!-- for bootstrap -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+ 	<script src="bootstrap/js/bootstrap.min.js" ></script>
+</body>
+</html>
